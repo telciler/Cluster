@@ -7,7 +7,7 @@ public class Test {
 		Cluster cluster = new Cluster();
 		double[][] Features=cluster.ExcelReader("data.xlsx", "Sayfa1"); 
 		cluster.clusterPoints(Features,4);
-		System.out.println("hahahahaha");
+		System.out.println("vay aqua");
 	}
 
 }
