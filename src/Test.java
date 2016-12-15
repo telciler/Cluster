@@ -5,9 +5,8 @@ public class Test {
 	public static void main(String[] args) throws IOException {
 		
 		Cluster cluster = new Cluster();
-		double[][] Features=cluster.ExcelReader("data.xlsx", "Sayfa1"); 
-		cluster.clusterPoints(Features,4);
-		System.out.println("vay aqua");
+		double[][] Features=cluster.ExcelReader("data2.xlsx", "Sheet1"); 
+		cluster.clusterPoints(Features,2);
 	}
 
 }

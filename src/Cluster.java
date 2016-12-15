@@ -39,7 +39,7 @@ public class Cluster {
 	private static ArrayList<Point> BestPoints;
 	private static double Obj1;
 	private static double PercentChange=1;
-	private static double Epsilon=0.000001;
+	private static double Epsilon=0.00000001;
 	private static int NumOfIterations=0;
 	private static int NumOfTrials=0;
 	private static int TrialLimit=50;
@@ -70,6 +70,7 @@ public class Cluster {
 		}
 		Display();
 		ListCentroids(BestCentroids);
+		ListPoints(BestPoints);
 	}
 
 		public static double[][] ExcelReader(String filename,String Sheetname) throws IOException{
@@ -264,8 +265,8 @@ public class Cluster {
 			Transformer<Integer, Point2D> locationTransformer = new Transformer<Integer, Point2D>() {
 
 				public Point2D transform(Integer vertex) {
-					double x = BestPoints.get(vertex.intValue()).getFeatureSet()[0]*7+100;
-					double y = BestPoints.get(vertex.intValue()).getFeatureSet()[1]*7+100;
+					double x = BestPoints.get(vertex.intValue()).getFeatureSet()[0]*4+100;
+					double y = BestPoints.get(vertex.intValue()).getFeatureSet()[1]*4+100;
 					return new Point2D.Double((double) x, (double) y);
 				}
 			};
